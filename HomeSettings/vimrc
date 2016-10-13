@@ -14,7 +14,9 @@ set sidescrolloff=3
 set scrolloff=3
 set backspace=2
 set background=dark
+set noerrorbells visualbell t_vb=
 hi Matchparen none
+
 
 set smarttab
 set ai
