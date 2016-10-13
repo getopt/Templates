@@ -51,12 +51,13 @@ let Tlist_WinWidth = 80
 let Tlist_Use_Right_Window = 1
 let Tlist_Display_Prototype = 1
 
+" Can cause issues with clearing the screen after closing
 " SecureCRT versions prior to 6.1.x do not support 4-digit DECSET
 "     let &t_ti = "\<Esc>[?1049h"
 "     let &t_te = "\<Esc>[?1049l"
 " Use 2-digit DECSET instead
-let &t_ti = "\<Esc>[?47h"
-let &t_te = "\<Esc>[?47l"
+" let &t_ti = "\<Esc>[?47h"
+" let &t_te = "\<Esc>[?47l"
 
 
 " ####
