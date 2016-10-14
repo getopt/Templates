@@ -15,6 +15,7 @@ set scrolloff=3
 set backspace=2
 set background=dark
 set noerrorbells visualbell t_vb=
+set backspace=indent,eol,start " this makes bakspace to work normally
 hi Matchparen none
 
 
