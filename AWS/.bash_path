@@ -1,0 +1,13 @@
+export PATH=$HOME/RsyncSH:$HOME/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/bin:${PATH}
+export MANPATH=/usr/man:/usr/local/man:$HOME/local/man:/usr/share/man/:${PATH}
+export LD_LIBRARY_PATH=$HOME/local/lib:$HOME/local/lib64:${PATH}
+
+PERL5LIB=${PERL5LIB}:$HOME/PerlModules/
+PERL5LIB=${PERL5LIB}:$HOME/src/bioperl-1.2.3/
+PERL5LIB=${PERL5LIB}:$HOME/src/ensembl/modules
+PERL5LIB=${PERL5LIB}:$HOME/src/ensembl-compara/modules
+PERL5LIB=${PERL5LIB}:$HOME/src/ensembl-variation/modules
+PERL5LIB=${PERL5LIB}:$HOME/src/ensembl-functgenomics/modules
+
+export PERL5LIB
+

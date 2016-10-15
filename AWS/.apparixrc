@@ -1,0 +1,9 @@
+j,s3,/s3
+j,sb,/data/s3bkd
+j,an,/data/s3bkd/Analysis
+j,dat,/data
+j,git,/home/smanakov/Git
+j,runs,/data/Runs
+j,yo,/data/s3bkd/Analysis/Yoda
+j,db,/data/s3bkd/Databases
+j,gen,/data/s3bkd/Databases/Genomes
