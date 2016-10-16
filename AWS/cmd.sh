@@ -3,8 +3,7 @@ sudo apt-get install git
 mkdir Git
 cd Git/
 git clone https://github.com/getopt/Templates.git
-cd Templates/
-cd AWS/
+cd Templates/AWS/
 cp .apparixrc  .bash_apparix  .bash_generic  .bash_path  .bash_profile  .bashrc  cmd.sh  .inputrc  .profile  .vimrc   ~/
 
 cd
