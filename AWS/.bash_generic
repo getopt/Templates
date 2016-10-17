@@ -14,7 +14,6 @@ alias ssh='ssh -XY'
 alias vi='vim -N -u ~/.vimrc'
 alias key='eval `ssh-agent`; ssh-add'
 alias len='perl -lne "print length"'
-# test
 alias key='eval `ssh-agent`; ssh-add'
 
 export CLICOLOR=1
