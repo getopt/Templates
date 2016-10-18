@@ -21,8 +21,10 @@ alias python='/cygdrive/c/Anaconda2/python.exe'
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-#export DISPLAY=:0.0 # for cygwin x-forwarding
-export DISPLAY=:0 # for cygwin x-forwarding
+# export DISPLAY=:0.0 # for cygwin x-forwarding
+# export DISPLAY=:0 # for cygwin x-forwarding
+export DISPLAY=localhost:0.0 # for WSL x-forwarding
+
 
 bind '"\t":menu-complete'
 
