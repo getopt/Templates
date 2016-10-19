@@ -7,10 +7,10 @@ sudo docker ps -a
 # search docker hub
 sudo docker search bowtie
 
-# start in foreground
+# run in foreground
 sudo docker run -i -t ubuntu /bin/bash
 
-# start in dettached mode as deamon
+# run in dettached mode as deamon
 sudo docker run --name daemon_bob -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
 
 # attach to the container
@@ -41,3 +41,6 @@ sudo docker run -d --name bowtie siarheimanakov/bowtie:1.1.2
 
 # push image to Docker Hub
 sudo docker push siarheimanakov/bowtie:1.1.2
+
+# run bowtie from container
+sudo docker run -it -v '/home/ubuntu/Test/BowtieInd/NCBI/malDom1.0/:/data/' -v '/home/ubuntu/Test/Fastq/Apple/:/tmp/' -w /data siarheimanakov/bowtie:1.1.2  bowtie --trim3 0 --trim5 0 --maxins 1000 -p 2 -v 0 -a '/data/malDomGD1.0_ncbi' -1 /tmp/Apple_S13_L001_R1_001.fastq -2 /tmp/Apple_S13_L001_R2_001.fastq --un unaln.fq --al aln.fq -S
