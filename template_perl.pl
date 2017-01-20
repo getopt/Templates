@@ -13,17 +13,18 @@ use List::Util qw( min max );
 # use File::Basename;
 # use lib dirname (__FILE__);
 # use lib::Levenshtein qw(distance);
+# use lib::statistics qw( mean median popstdev stdev mode);
+
+sub main
+{
+    my ($fasta,$yaml) = @{read_options()};
+    my $SETTINGS = LoadFile($yaml);
+        print Dumper $SETTINGS; exit;
+}
 
 
-my ($fasta,$yaml) = @{read_options()};
-my $SETTINGS = LoadFile($yaml);
-    print Dumper $SETTINGS; exit;
-
-
-
-
-sub read_options{
-
+sub read_options
+{
     # defaults
     my $fasta = '';
     abs_path($0) =~ /(.*)\//;
@@ -36,3 +37,6 @@ sub read_options{
 
     return [$fasta,$yaml];
 }
+
+
+main();
