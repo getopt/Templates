@@ -33,7 +33,7 @@ bind '"\t":menu-complete'
 
 
 function generic_powerprompt()
-{   PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD | sed 's/^.*\/\([^\/]*\/[^\/]*$\)/\1/')) "
+{   PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD | sed 's/^.*\/\([^\/]*\/[^\/]*$\)/\1/'))\n"
     # or, if you get it to work
 }
 generic_powerprompt
