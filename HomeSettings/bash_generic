@@ -31,9 +31,10 @@ bind '"\t":menu-complete'
 ## bind '^F:reverse-search-history'
 ## bind '^G:forward-search-history'
 
-
+# briefer path in prompt
+# PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD | sed 's/^.*\/\([^\/]*\/[^\/]*$\)/\1/'))\n"
 function generic_powerprompt()
-{   PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD | sed 's/^.*\/\([^\/]*\/[^\/]*$\)/\1/'))\n"
+{   PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD))\n$ "
     # or, if you get it to work
 }
 generic_powerprompt
