@@ -34,7 +34,7 @@ bind '"\t":menu-complete'
 # briefer path in prompt
 # PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD | sed 's/^.*\/\([^\/]*\/[^\/]*$\)/\1/'))\n"
 function generic_powerprompt()
-{   PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD))\n$ "
+{   PS1="\n($USER|$(hostname | cut -d. -f1)|$(echo $PWD))\n$(echo $PWD | perl -ne 'chomp;s/.*\///; print "\.\.\/",$_,"\/"' ) $ "
     # or, if you get it to work
 }
 generic_powerprompt
