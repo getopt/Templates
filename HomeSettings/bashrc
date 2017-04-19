@@ -9,34 +9,18 @@ alias c='clear'
 # source $HOME/.bash_path
 # source $HOME/.bash_apparix
 # source $HOME/.bash_generic
+# source $HOME/.bash_apparix
 
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export INPUTRC=~/.inputrc
 
 bind '"\t":menu-complete'
 
 ## bind '^F:reverse-search-history'
 ## bind '^G:forward-search-history'
 
-
-function generic_powerprompt()
-{   PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD | sed 's/^.*\/\([^\/]*\/[^\/]*$\)/\1/')) "
-    # or, if you get it to work
-}
-generic_powerprompt
-function cd
-{  if test "x$*" != x; then
-      command cd "$*"      # check syntax of this
-    else
-      command cd
-   fi
-   generic_powerprompt
-}
-
-export INPUTRC=~/.inputrc
-
-source $HOME/.bash_apparix
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
