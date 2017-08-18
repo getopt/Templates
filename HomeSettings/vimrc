@@ -1,3 +1,29 @@
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+set runtimepath^=/Users/smanakov/.vim/majutsushi-tagbar-53e9cb0/
+
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+
+
 " set tags=tags
 set tags=tags;
 "  search for tags files in directories higher up.
@@ -5,6 +31,7 @@ set tags=tags;
 filetype on
 
 "   syntax on
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 set et
 set expandtab
 set nowrap
@@ -36,21 +63,26 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 hi StatusLine ctermfg=black ctermbg=green
 
-command NS :%s/  / /g 
-command TU :TlistUpdate
-command TT :TlistToggle
-command TC :TlistClose
-command TO :TlistOpen
+" " taglist specific options
+" command NS :%s/  / /g 
+" command TU :TlistUpdate
+" command TT :TlistToggle
+" command TC :TlistClose
+" command TO :TlistOpen
+" let Tlist_Exit_OnlyWindow = 1
+" let Tlist_WinWidth = 80
+" let Tlist_Use_Right_Window = 1
+" let Tlist_Display_Prototype = 1
+
+" tagbar specific options
+command TO :TagbarOpen
+command TC :TagbarClose
+let tagbar_width=80
 
 setlocal spell spelllang=en
 set spellcapcheck=
 set nospell
 set spf=$HOME/.spell.en.add
-
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_WinWidth = 80
-let Tlist_Use_Right_Window = 1
-let Tlist_Display_Prototype = 1
 
 " Can cause issues with clearing the screen after closing
 " SecureCRT versions prior to 6.1.x do not support 4-digit DECSET
