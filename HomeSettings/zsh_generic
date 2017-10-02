@@ -1,0 +1,45 @@
+
+set -o vi
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias grep='/usr/local/Cellar/grep/2.27/bin/ggrep --colour=auto'
+alias via='vi ~/.apparixrc'
+alias clear='printf "\033c"'
+alias c='clear'
+alias ls='ls'
+alias lc='ls -l --color=auto'
+alias l='ls -l'
+alias ll='ls -la'
+alias sotc='source ~/.bashrc'
+alias ssh='ssh -XY'
+alias vim='/usr/local/bin/vim'
+alias vi='vim -N -u ~/.vimrc'
+alias key='eval `ssh-agent`; ssh-add'
+alias len='perl -lne "print length"'
+alias ctags="`brew --prefix`/bin/ctags"
+
+
+# export DISPLAY=:0.0 # for cygwin x-forwarding
+# export DISPLAY=:0 # for cygwin x-forwarding
+export DISPLAY=localhost:0.0 # for WSL x-forwarding
+
+export INPUTRC=~/.inputrc
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+   # alias ls='ls --color=auto'
+   alias dir='dir --color=auto'
+   alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# bind '"\t":menu-complete'
+## bind '^F:reverse-search-history'
+## bind '^G:forward-search-history'
+

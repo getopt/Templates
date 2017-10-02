@@ -128,11 +128,12 @@ function _apparix_aliases ()
 
 alias via='vi $HOME/.apparixrc'
 
-# command to register the above to expand when the 'to' command's args are
-# being expanded
-complete -o nospace -F _apparix_aliases to
-complete -o nospace -F _apparix_aliases als
-complete -o nospace -F _apparix_aliases ae
+# does not work under zsh
+# # command to register the above to expand when the 'to' command's args are
+# # being expanded
+# complete -o nospace -F _apparix_aliases to
+# complete -o nospace -F _apparix_aliases als
+# complete -o nospace -F _apparix_aliases ae
 
 export APPARIXLOG=$HOME/.apparixlog
 
