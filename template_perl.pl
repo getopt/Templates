@@ -18,8 +18,8 @@ use List::Util qw( min max );
 sub main
 {
     my ($fasta,$yaml) = @{read_options()};
-    my $SETTINGS = LoadFile($yaml);
-        print Dumper $SETTINGS; exit;
+    my $settings = LoadFile($yaml);
+        print Dumper $settings; exit;
 }
 
 
