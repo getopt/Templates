@@ -5,7 +5,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-set runtimepath^=/Users/smanakov/.vim/majutsushi-tagbar-53e9cb0/
+set runtimepath^=/Users/smanakov/.vim/majutsushi-tagbar-c004652/
 
 
 " alternatively, pass a path where Vundle should install plugins
@@ -22,7 +22,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
-
+set hlsearch
 
 " set tags=tags
 set tags=tags;
@@ -30,7 +30,7 @@ set tags=tags;
 
 filetype on
 
-"   syntax on
+syntax on
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 set et
 set expandtab
@@ -145,4 +145,7 @@ endfunction
 
 nnoremap <silent> <leader>p :call Getclip()<CR>
 
-
+highlight DiffChange cterm=bold ctermbg=8 ctermfg=2
+highlight DiffText   cterm=reverse ctermbg=2 ctermfg=17
+highlight DiffAdd    cterm=bold ctermbg=22 ctermfg=255
+highlight DiffDelete cterm=bold ctermfg=1 ctermbg=1
