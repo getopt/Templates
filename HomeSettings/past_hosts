@@ -1,0 +1,19 @@
+host california california.cacr.caltech.edu
+    user manakov
+    hostname california.caltech.edu
+
+host nevada nevada.cacr.caltech.edu
+    user manakov
+    hostname nevada.cacr.caltech.edu
+
+host phila phila.cacr.caltech.edu
+    user manakov
+    hostname phila.cacr.caltech.edu
+
+host droso droso.cacr.caltech.edu
+    user manakov
+    hostname droso.cacr.caltech.edu
+
+host cuba cuba.caltech.edu
+    user manakov
+    hostname cuba.caltech.edu
