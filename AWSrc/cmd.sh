@@ -3,8 +3,16 @@ sudo apt-get install git
 mkdir Git
 cd Git/
 git clone https://github.com/getopt/Templates.git
-cd Templates/AWS/
-cp .apparixrc  .bash_apparix  .bash_generic  .bash_path  .bash_profile  .bashrc  cmd.sh  .inputrc  .profile  .vimrc   ~/
+cd Templates/HomeSettings/
+cp vimrc           ~/.vimrc
+cp profile         ~/.profile         
+cp inputrc         ~/.inputrc
+cp bashrc          ~/.bashrc
+cp bash_profile    ~/.bash_profile
+cp bash_path       ~/.bash_path
+cp bash_generic    ~/.bash_generic
+cp bash_apparix    ~/.bash_apparix
+
 
 cd
 sudo sh -c "echo deb https://apt.dockerproject.org/repo ubuntu-trusty main > /etc/apt/sources.list.d/docker.list"
