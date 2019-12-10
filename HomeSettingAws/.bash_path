@@ -1,0 +1,28 @@
+export PATH="/home/ec2-user/anaconda3/bin:$HOME/local/bin:/home/ec2-user/homer/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH"
+PATH="/home/ec2-user/perl5/bin${PATH:+:${PATH}}"; export PATH;
+
+# PERL5LIB=${PERL5LIB}:$HOME/PerlModules/
+# PERL5LIB=${PERL5LIB}:$HOME/src/bioperl-1.2.3/
+# PERL5LIB=${PERL5LIB}:$HOME/src/ensembl/modules
+# PERL5LIB=${PERL5LIB}:$HOME/src/ensembl-compara/modules
+# PERL5LIB=${PERL5LIB}:$HOME/src/ensembl-variation/modules
+# PERL5LIB=${PERL5LIB}:$HOME/src/ensembl-functgenomics/modules
+PERL5LIB="/home/ec2-user/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+
+PERL_LOCAL_LIB_ROOT="/home/ec2-user/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/ec2-user/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/ec2-user/perl5"; export PERL_MM_OPT;
+
+export MANPATH=/usr/man:/usr/local/man:$HOME/local/man:/usr/share/man/:${PATH}
+export LD_LIBRARY_PATH=$HOME/local/lib:$HOME/local/lib64:${PATH}
+
+
+PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+
+PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
+
+
+PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+

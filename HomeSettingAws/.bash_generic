@@ -1,0 +1,80 @@
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias grep='grep --colour=auto'
+alias via='vi ~/.apparixrc'
+#alias clear='cmd /c cls'
+alias clear='printf "\033c"'
+alias c='clear'
+alias ls='ls'
+alias lc='ls -l --color=auto'
+alias l='ls -l'
+alias bub='vi /cygdrive/c/Users/smanakov/Dropbox/Documents/Home_settings/clines'
+alias bus='vi /cygdrive/c/Users/smanakov/Dropbox/Documents/Home_settings/cslines'
+alias sotc='source ~/.bashrc'
+alias ssh='ssh -XY'
+alias vi='vim -N -u ~/.vimrc'
+alias key='eval `ssh-agent`; ssh-add'
+alias len='perl -lne "print length"'
+alias python='/cygdrive/c/Anaconda2/python.exe' 
+
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# export DISPLAY=:0.0 # for cygwin x-forwarding
+# export DISPLAY=:0 # for cygwin x-forwarding
+export DISPLAY=localhost:0.0 # for WSL x-forwarding
+
+
+bind '"\t":menu-complete'
+
+## bind '^F:reverse-search-history'
+## bind '^G:forward-search-history'
+
+
+# from https://github.com/magicmonty/bash-git-prompt
+
+# (mac)
+# before this can work do: `brew update; brew install bash-git-prompt`
+# if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+#   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+#   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+# fi
+# GIT_PROMPT_ONLY_IN_REPO=1
+# (linux)
+# source ~/.bash-git-prompt/gitprompt.sh
+# GIT_PROMPT_ONLY_IN_REPO=1
+
+
+
+# briefer path in prompt
+# PS1="($USER|$(hostname | cut -d. -f1)|$(echo $PWD | sed 's/^.*\/\([^\/]*\/[^\/]*$\)/\1/'))\n"
+function generic_powerprompt()
+{   PS1="\n($USER|$(hostname | cut -d. -f1)|$(echo $PWD))\n$(echo $PWD | perl -ne 'chomp;s/.*\///; print "\.\.\/",$_,"\/"' ) $ "
+    # or, if you get it to work
+}
+generic_powerprompt
+function cd
+{  if test "x$*" != x; then
+      command cd "$*"      # check syntax of this
+    else
+      command cd
+   fi
+   generic_powerprompt
+}
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+   # alias ls='ls --color=auto'
+   alias dir='dir --color=auto'
+   alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+
+
+
