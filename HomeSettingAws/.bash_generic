@@ -9,20 +9,15 @@ alias c='clear'
 alias ls='ls'
 alias lc='ls -l --color=auto'
 alias l='ls -l'
-alias bub='vi /cygdrive/c/Users/smanakov/Dropbox/Documents/Home_settings/clines'
-alias bus='vi /cygdrive/c/Users/smanakov/Dropbox/Documents/Home_settings/cslines'
 alias sotc='source ~/.bashrc'
 alias ssh='ssh -XY'
 alias vi='vim -N -u ~/.vimrc'
 alias key='eval `ssh-agent`; ssh-add'
 alias len='perl -lne "print length"'
-alias python='/cygdrive/c/Anaconda2/python.exe' 
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-# export DISPLAY=:0.0 # for cygwin x-forwarding
-# export DISPLAY=:0 # for cygwin x-forwarding
 export DISPLAY=localhost:0.0 # for WSL x-forwarding
 
 
