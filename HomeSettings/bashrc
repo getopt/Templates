@@ -1,4 +1,6 @@
 
+TERM=xterm-256color # to get rid of "E558: Terminal etnry not found in term info
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
